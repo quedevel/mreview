@@ -12,6 +12,7 @@ public interface MovieRepository extends JpaRepository<Movie,Long> {
 
     @Query("select " +
             "   m, " +
+            "   mi, " +
             "   avg(coalesce(r.grade,0)), " +
             "   count(distinct r) " +
             " from Movie m " +
